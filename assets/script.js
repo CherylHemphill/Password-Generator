@@ -2,11 +2,11 @@
 
 // set variables for password
 
-let charUp = ["ABCDEFGHIJKLMNOPQRSTUVWZYZ"];
-let charLo = ["abcdefghijklmnopqrstuvwxyz"];
-let charNum = ["1234567890"];
-let charSpc = ["!@#$%^&*()_+"];
-let password = " "; 
+let charUp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+let charLo = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let charNum = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let charSpc = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+'];
+
 
   
 // Get references to the #generate element
@@ -15,74 +15,90 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 // prompt user for criteria (length between 8-128, upperCase, lowerCase, numbers, symbols)
 var length = prompt("How long would you like your password to be? (8-128 characters)");
-if (length <8 || length > 128) {
+  if (length <8 || length > 128) {
   return "Please choose a valid number between 8 and 128."
-} else if (isNaN(length)) {
+} 
+  else if (isNaN(length)) {
   return "Please enter a valid number."
-} else {
+} 
+  else {
   alert ("Your password will be " + length + " characters long.");
 }
-  console.log(length);
  
-var capsUp = confirm("Include UpperCase? y/n");
-if (capsUp) {
-  alert ("Your password will  include Uppercase letters.");
-} else  {
+ 
+  let Up = confirm("Include UpperCase? y/n");
+  if (Up)  {
+  alert ("Your passwocrd will  include Uppercase letters.");
+} 
+  else  {
   alert ("Your password will not include Uppercase letters");
 }
 
-var capsLo = confirm("Include LpperCase? y/n");
-if (capsLo) {
+
+ let Lo = confirm("Include LpperCase? y/n");
+  if (Lo) {
   alert ("Your password will  include Lowercase letters.");
-} else  {
+}
+ else  {
   alert ("Your password will not include Lowercase letters");
 }
 
-var num = confirm("Include Numbers? y/n");
-if (num ) {
+
+let Num = confirm("Include Numbers? y/n");
+  if (Num ) {
   alert ("Your password will  include Numbers.");
-} else  {
+} 
+  else  {
   alert ("Your password will not include Numbers.");
 }
 
-var sym = confirm("Include Symbols? y/n");
-if (sym ) {
+
+ let Spc = confirm("Include Symbols? y/n");
+  if (Spc ) {
   alert ("Your password will  include Symbols.");
-} else  {
+}
+  else  {
   alert ("Your password will not include Symbols.");
 }
-}
 
+
+let allUserOptions = []; 
 // concat user selections
 
-if (capsUp) {
-  password = password.concat(capsUp)
+if (Up) {
+  allUserOptions = allUserOptions.concat(charUp)
 }
-if (capsLo) {
-  password = password.concat(capsLo)
+if (Lo) {
+  allUserOptions = allUserOptions.concat(charLo)
 }
-if (num) {
-  password = password.concat(num)
+if (Num) {
+  allUserOptions = allUserOptions.concat(charNum)
 }
-if (sym) {
-  password = password.concat(sym)
+if (Spc) {
+  allUserOptions = allUserOptions.concat(charSpc)
 }
-/*
-for (var i = 0; i <= length; i++){
-  password = Math.floor(Math.random() * password.length);
 
-  return password;
+let password = [];
+
+// Loop password 
+for (var i = 0; i < length; i++) {
+  var index = Math.floor(Math.random() * allUserOptions.length);
+  var character = allUserOptions[index];
+  password.push(character);
+}
+
+return password.join('')
 }; 
-*/
+
 // Write password to the #password input
 function writePassword() {
-  let password = generatePassword() 
+   password = generatePassword() 
   let passwordText = document.querySelector("#password"); 
 
   passwordText.value = password;
 
 }
 
-console.log(password)
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
