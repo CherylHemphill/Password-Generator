@@ -28,16 +28,16 @@ var length = prompt("How long would you like your password to be? (8-128 charact
  
   let Up = confirm("Include UpperCase? y/n");
   if (Up)  {
-  alert ("Your passwocrd will  include Uppercase letters.");
+  alert ("Your passwocrd will include Uppercase letters.");
 } 
   else  {
   alert ("Your password will not include Uppercase letters");
 }
 
 
- let Lo = confirm("Include LpperCase? y/n");
+ let Lo = confirm("Include LowerCase? y/n");
   if (Lo) {
-  alert ("Your password will  include Lowercase letters.");
+  alert ("Your password will include Lowercase letters.");
 }
  else  {
   alert ("Your password will not include Lowercase letters");
@@ -45,8 +45,8 @@ var length = prompt("How long would you like your password to be? (8-128 charact
 
 
 let Num = confirm("Include Numbers? y/n");
-  if (Num ) {
-  alert ("Your password will  include Numbers.");
+  if (Num) {
+  alert ("Your password will include Numbers.");
 } 
   else  {
   alert ("Your password will not include Numbers.");
@@ -55,7 +55,7 @@ let Num = confirm("Include Numbers? y/n");
 
  let Spc = confirm("Include Symbols? y/n");
   if (Spc ) {
-  alert ("Your password will  include Symbols.");
+  alert ("Your password will include Symbols.");
 }
   else  {
   alert ("Your password will not include Symbols.");
@@ -102,3 +102,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
