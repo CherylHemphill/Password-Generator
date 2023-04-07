@@ -25,4 +25,13 @@ Follow prompt windows to answer questions regarding your preferences.
 Your newly generated password will appear in the text box. 
 You can copy your password and paste it into your desired accounts.
 
+![screenshot](/assets/images/Screenshot%202023-04-06%20203729.png)
+
+## Credits
+
+N/A
+
+## License
+
+Refer to License section within the repoistory
 
