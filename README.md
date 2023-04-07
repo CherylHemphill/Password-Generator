@@ -29,8 +29,8 @@ You can copy your password and paste it into your desired accounts.
 
 ## Credits
 
-Formating tips provided by :AskBCS
-Error code assistance provided by tutoring: Stephanie Smith
+Formating tips provided by :AskBCS //
+ Error code assistance provided by tutoring: Stephanie Smith
 
 ## License
 
