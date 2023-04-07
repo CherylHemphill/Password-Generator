@@ -14,7 +14,7 @@ This password generator utilizes user input for desired password such as:
 
 ## Installation
 
-Open your web browser of choice and follow the link to generate your own random password
+Open your web browser of choice and follow the link to generate your own random password.
 
 https://cherylhemphill.github.io/Password-Generator/
 
